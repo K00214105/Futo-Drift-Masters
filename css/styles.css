@@ -2,11 +2,40 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #434c50;
+    background-color: white;
     min-height: 100vh;
     font: normal 16px sans-serif;
-    padding: 40px 0;
+    padding-top: 50px;
+
 }
+
+h1 {
+    text-align: center
+}
+
+/*Fonts*/
+@font-face {
+    font-family: GoboldBold;
+    src: url(GoboldBold.ttf);
+}
+
+@font-face {
+    font-family: PRIMETIME;
+    src: url(PRIMETIME.ttf);
+}
+
+h1,
+h2,
+h3,
+strong {
+    font-family: GoboldBold;
+}
+
+footer p {
+    font-family: GoboldBold;
+}
+
+
 
 /*Header & Nav*/
 header {
@@ -17,12 +46,19 @@ header {
     width: 100%;
     box-sizing: border-box;
     background: black;
+    border-bottom: 2px solid red;
+    z-index: 1000;
 }
 
 header .logo {
     height: 50px;
     line-height: 50px;
     float: left;
+}
+
+.logo:hover {
+    width: 130px;
+
 }
 
 header nav {
@@ -64,8 +100,7 @@ header nav ul li ul {
 header nav ul li.active ul {
     /* use li: hover instead */
     display: block;
-        z-index: 999;
-
+    z-index: 999;
 }
 
 header nav ul li ul li {
@@ -84,14 +119,16 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #fff;
-    background: #2196f3;
+    background: red;
+    text-decoration: none;
 }
 
 header nav ul li a.active {
-    background: #2196f3;
-    
+    background: red;
+
 }
 
+/*Nav*/
 .menu-toggle {
     color: #fff;
     float: right;
@@ -101,26 +138,128 @@ header nav ul li a.active {
     display: none
 }
 
-nav i{
+nav i {
     padding-right: 5px;
 }
-nav #info{
+
+nav #info {
     margin-left: 5px;
 }
 
+/*Carosel*/
+.item img {
+    width: 100%;
+    max-height: 800px;
+}
+
+#myCarousel {}
+
+.carousel-indicators {
+    z-index: 1;
+}
+
+/*parallax*/
+#parallax {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url(../img/hero%20image.jpg);
+    background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+    background-color: black;
+    /* background-image: url(../img/hero%20image.jpg);*/
+
+}
+
+#parallax h1 {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Arial";
+    text-transform: uppercase;
+    opacity: .2;
+    font-size: 8rem;
+    color: white;
+    text-align: center;
+}
+
+/*Boxes*/
+#boxes {
+    padding-bottom: 20px;
+}
+
+.boxcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#boxes .box {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 30px;
+}
+
+
 /*Gallery Code*/
-.container.gallery-container {
+
+.instaframe {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: none;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallerydiv {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 1em;
+}
+
+.youtube {
+    text-align: center;
+}
+
+.youtube iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery-container {
     background-color: #fff;
     color: #35373a;
     min-height: 100vh;
-    padding: 30px 50px;
+    /*    padding: 30px 50px;*/
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 5px 5px, 0px 0px;
+    padding-top: 50px;
 }
 
 .gallery-container h1 {
     text-align: center;
-    margin-top: 50px;
+    padding-top: 10px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: bold;
+    color: white;
 }
 
 .gallery-container p.page-description {
@@ -131,7 +270,7 @@ nav #info{
 }
 
 .tz-gallery {
-    padding: 40px;
+    padding: 10px;
 }
 
 /* Override bootstrap column paddings */
@@ -184,14 +323,149 @@ nav #info{
 }
 
 
+/*Footer*/
+.footer-basic-centered {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: normal 18px sans-serif;
+    padding: 45px;
+    margin-top: 10px;
+}
+
+.footer-basic-centered .footer-company-motto {
+    color: #8d9093;
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-links {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 35px 0 23px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Scroll to top*/
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: gray;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+
 /*Media Queries*/
-@media(max-width: 768px) {
-    body {
-        padding: 0;
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    
+     #myCarousel{
+        padding-top: 50px;
+    }
+
+    .boxcontainer {
+        background-color: aqua;
+    }
+
+    #boxes .box {
+        width: 90%;
+    }
+
+    .footer-basic-centered {
+        padding: 35px;
+    }
+
+    .footer-basic-centered .footer-company-motto {
+        font-size: 18px;
+    }
+
+    .footer-basic-centered .footer-company-name {
+        font-size: 12px;
+    }
+
+    .footer-basic-centered .footer-links {
+        font-size: 14px;
+        padding: 25px 0 20px;
+    }
+
+    .footer-basic-centered .footer-links a {
+        line-height: 1.8;
     }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .boxcontainer {
+        background-color: red;
+    }
+
+    #boxes .box {
+        width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .boxcontainer {
+        background-color: goldenrod;
+    }
+
+    #boxes .box {
+        width: 350px;
+    }
+
+}
+
+/*Nav*/
 @media (max-width: 860px) {
+
+    body {
+        padding: 0;
+    }
+
     header {
         padding: 0 20px;
     }
@@ -210,10 +484,12 @@ nav #info{
         height: calc(100vh - 50px);
         background: #333;
         transition: 0.5s;
+
     }
 
     header nav.active {
         left: 0;
+
     }
 
     header nav ul {
@@ -227,10 +503,24 @@ nav #info{
 
     header nav ul li.active ul {
         position: relative;
-        background: #003e6f;
+        background-color: gray;
     }
 
     header nav ul li ul li {
         width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .boxcontainer {
+        background-color: green;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .boxcontainer {
+        background-color: palevioletred;
     }
 }

@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Futo Drift Masters">
+    <meta name="author" content="Daniel O' Keeffe">
+
+    <title>Futo Drift Masters - Gallery</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html"><img class="logo" src="img/logo.png"></a></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>
+                        Home</a></li>
+                <li class="sub-menu"><a href="#"><i class="fa fa-video-camera"></i>
+                        Gallery</a>
+                    <ul>
+                        <li><a href="gallery.html"><i class="fa fa-video-camera"></i>Main Gallery</a></li>
+                        <li><a href="imageGallery.html"><i class="fa fa-video-camera"></i>Image Gallery</a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i>
+                                Youtube</a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                Instagram</a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                Twitter</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i id="info" class="fa fa-info" aria-hidden="true"></i>
+                        About</a></li>
+                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                        Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+
+
+
+    <div class="gallery-container">
+        <h1>Image Gallery</h1>
+
+        <div class="tz-gallery">
+
+            <div class="row">
+
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="./img/1.jpg">
+                        <img src="img/1.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/2.jpg">
+                        <img src="img/2.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/3.jpg">
+                        <img src="img/3.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <a class="lightbox" href="./img/4.jpg">
+                        <img src="img/4.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/2.jpg">
+                        <img src="img/2.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/3.jpg">
+                        <img src="img/3.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="./img/4.jpg">
+                        <img src="img/4.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/1.jpg">
+                        <img src="img/1.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/2.jpg">
+                        <img src="img/2.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-8">
+                    <a class="lightbox" href="./img/4.jpg">
+                        <img src="img/4.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/2.jpg">
+                        <img src="img/2.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./img/3.jpg">
+                        <img src="img/3.jpg" alt="Bridge">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-basic-centered">
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <p class="footer-company-motto">Futo Drift Masters</p>
+
+        <p class="footer-company-name">Daniel O' Keeffe &copy; 2019</p>
+
+    </footer>
+
+
+    <!--Scripts-->
+    <!--Nav-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                $('.menu-toggle').click(function() {
+                    $('nav').toggleClass('active')
+                })
+
+                $('ul li').click(function() {
+                    $(this).siblings().removeClass('active');
+                    $(this).toggleClass('active');
+                })
+            }
+        )
+    </script>
+
+    <!--Gallery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+    <script>
+        /* Scroll to top*/
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+</body>
+
+</html>
