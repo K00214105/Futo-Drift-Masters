@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: white;
+    background-color: gainsboro;
     min-height: 100vh;
     font: normal 16px sans-serif;
     padding-top: 50px;
@@ -24,18 +24,40 @@ h1 {
     src: url(PRIMETIME.ttf);
 }
 
-h1,
-h2,
-h3,
-strong {
+.hyperlink {
+    color: red;
+    font-weight: 600;
+}
+
+.box h3, .gallerydiv h1, .youtube h1, .gallery-wrapper h1 {
+    font-family: PRIMETIME;
+}
+
+footer p,
+.box button {
     font-family: GoboldBold;
 }
 
-footer p {
-    font-family: GoboldBold;
+/*Font Changes*/
+.box p, * p {
+    line-height: 1.7;
+    font-size: 16px;
 }
 
+/*Button*/
+.box button {
+    background-color: dimgrey;
+    color: white;
+     border-radius: 0px;
+    padding: 10px 15px;
+}
 
+.box button:hover {
+    border: 1px solid dimgrey;
+    background-color: white;
+    color: dimgrey;
+    border-radius: 0px;
+}
 
 /*Header & Nav*/
 header {
@@ -152,8 +174,6 @@ nav #info {
     max-height: 800px;
 }
 
-#myCarousel {}
-
 .carousel-indicators {
     z-index: 1;
 }
@@ -168,7 +188,7 @@ nav #info {
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;
-    background-color: black;
+    
     /* background-image: url(../img/hero%20image.jpg);*/
 
 }
@@ -179,17 +199,19 @@ nav #info {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: "Arial";
+     font-family: GoboldBold;
     text-transform: uppercase;
-    opacity: .2;
+    opacity: .8;
     font-size: 8rem;
     color: white;
     text-align: center;
+    color: white;
 }
 
 /*Boxes*/
 #boxes {
     padding-bottom: 20px;
+     background-color: gainsboro;
 }
 
 .boxcontainer {
@@ -197,6 +219,7 @@ nav #info {
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 20px;
+    background-color: gainsboro;
 }
 
 #boxes .box {
@@ -205,12 +228,16 @@ nav #info {
     padding: 20px;
     text-align: center;
     background-color: white;
-
+box-shadow: 5px 10px #888888;
     margin-left: 1%;
     margin-right: 1%;
     margin-top: 30px;
 }
 
+.boxImg {
+    width: 120px;
+    height: 120px;
+}
 
 /*Gallery Code*/
 
@@ -242,6 +269,18 @@ nav #info {
     height: 100vh;
 }
 
+.widgetcontainer{
+   box-shadow: 10px 5px 5px grey;
+}
+
+.youtube{
+    margin-top: 60px;
+     box-shadow: 10px 5px 5px grey;
+    margin-bottom: 60px;
+}
+.gallerydiv{
+    max-width: 1000px;
+}
 .gallery-container {
     background-color: #fff;
     color: #35373a;
@@ -322,8 +361,11 @@ nav #info {
     background-color: transparent !important;
 }
 
+/*About Page*/
 
 /*Footer*/
+
+
 .footer-basic-centered {
     background-color: #292c2f;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -332,7 +374,6 @@ nav #info {
     text-align: center;
     font: normal 18px sans-serif;
     padding: 45px;
-    margin-top: 10px;
 }
 
 .footer-basic-centered .footer-company-motto {
@@ -401,14 +442,16 @@ nav #info {
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
-    
-     #myCarousel{
+
+    #myCarousel {
         padding-top: 50px;
     }
 
+/*
     .boxcontainer {
         background-color: aqua;
     }
+*/
 
     #boxes .box {
         width: 90%;
@@ -438,9 +481,11 @@ nav #info {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+/*
     .boxcontainer {
         background-color: red;
     }
+*/
 
     #boxes .box {
         width: 80%;
@@ -449,9 +494,11 @@ nav #info {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+/*
     .boxcontainer {
         background-color: goldenrod;
     }
+*/
 
     #boxes .box {
         width: 350px;
@@ -513,14 +560,18 @@ nav #info {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+/*
     .boxcontainer {
         background-color: green;
     }
+*/
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+/*
     .boxcontainer {
         background-color: palevioletred;
     }
+*/
 }
