@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: gainsboro;
+    background-color: white;
     min-height: 100vh;
     font: normal 16px sans-serif;
 
@@ -13,6 +13,12 @@ body {
     text-align: center;
     max-width: 1920px;
     margin: 0 auto;
+
+
+}
+
+.push {
+    margin-top: 100px;
 }
 
 .page {
@@ -42,13 +48,22 @@ h1 {
 .box h3,
 .gallerydiv h1,
 .youtube h1,
-.gallery-wrapper h1 {
+.gallery-wrapper h1,
+h1,
+h3,
+strong,
+h2 {
     font-family: PRIMETIME;
 }
 
 footer p,
 .box button {
     font-family: GoboldBold;
+}
+
+.btn btn1 {
+    display: flex;
+    align-items: baseline;
 }
 
 /*Font Changes*/
@@ -89,7 +104,7 @@ header {
     background: black;
     border-bottom: 2px solid red;
     z-index: 1000;
-
+    position: fixed;
 }
 
 header .logo {
@@ -111,6 +126,7 @@ header .logo {
 header nav {
     float: right;
     z-index: 999;
+
 }
 
 header nav ul {
@@ -153,6 +169,7 @@ header nav ul li ul {
     left: 0;
     background: #333;
     display: none;
+
 }
 
 header nav ul li.active ul {
@@ -164,6 +181,7 @@ header nav ul li.active ul {
 header nav ul li ul li {
     display: block;
     width: 200px;
+    display: flex;
 }
 
 header nav ul li a {
@@ -173,6 +191,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     display: block;
+
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -269,11 +288,19 @@ nav #info {
     background-position: 0px 0px, 5px 5px, 0px 0px;
 }
 
+.divide {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
 /*Boxes*/
 #boxes {
     padding-bottom: 20px;
     background-color: gainsboro;
 }
+
+
 
 .boxcontainer {
     display: flex;
@@ -351,7 +378,8 @@ nav #info {
     height: 100%;
 }
 
-.widgetcontainer, #ytdiv {
+.widgetcontainer,
+#ytdiv {
     box-shadow: 10px 5px 5px grey;
     background: #ffffff;
 }
@@ -446,10 +474,34 @@ nav #info {
     background-color: transparent !important;
 }
 
+.carousel-indicators {
+
+    bottom: 5px;
+
+}
+
 /*About Page*/
-#main-about{
+#main-about {
     margin-top: 80px;
 }
+
+.paragraph {
+    margin-top: 3rem;
+}
+
+#main-about h3 {
+    margin-top: 50px;
+}
+
+.about-box {
+    padding: 10px;
+
+}
+
+.about-box img {
+    max-width: 300px;
+}
+
 /*Footer*/
 
 
@@ -487,6 +539,16 @@ nav #info {
     display: inline-block;
     text-decoration: none;
     color: inherit;
+}
+
+footer img {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+footer img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 /*Scroll to top*/
@@ -601,11 +663,12 @@ nav #info {
     .footer-basic-centered .footer-links a {
         line-height: 1.8;
     }
+
     .socialblock {
         margin-top: 16px;
-        display:block;
+        display: block;
     }
-    
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -640,7 +703,7 @@ nav #info {
     }
 
 
-    
+
 }
 
 /*Nav*/
@@ -693,8 +756,8 @@ nav #info {
     header nav ul li ul li {
         width: 100%;
     }
-    
-    
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
